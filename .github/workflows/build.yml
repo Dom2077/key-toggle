@@ -12,6 +12,7 @@ jobs:
           python-version: '3.11'
       - run: pip install pynput pyinstaller
       - run: pyinstaller --onefile --windowed --name KeyToggle key_toggle.py
+        working-directory: ${{ github.workspace }}
       - uses: actions/upload-artifact@v4
         with:
           name: KeyToggle
